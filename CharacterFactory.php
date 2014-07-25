@@ -1,7 +1,7 @@
 <?php
 require_once 'Connection.php';
 
-class Character
+class CharacterFactory
 {
   /**
    * @var Connection
