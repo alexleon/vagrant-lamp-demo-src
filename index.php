@@ -1,7 +1,9 @@
 <?php
-require_once 'Character.php';
+require_once 'CharacterFactory.php';
 
-$character = new Character();
+$factory = new CharacterFactory();
 $id = isset($_REQUEST['id']) ? (integer) $_REQUEST['id'] : 1;
+$character = $factory->findById($id);
 
-echo '<pre>'.print_r($character->findById($id), 1).'</pre>';
+echo '<pre>'.print_r($character, 1).'</pre>';
+echo '<img src="./imgs/' . $character->img . '">';
